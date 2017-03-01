@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="模块创建模块：
+1angular.module(&#39;模块名称&#39;, [])
+启动模块：
+12345// 指令方式启动ng-app=&quot;模块名&quot;// 代码方式启动angular.bootstrap(document, [&#39;模块名&#39;])
+获取模块：
+1angular.module(&#39;模块名&#39;)
+启动多个模块（">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Hack Yang">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Angular2"/>
+    
+
+    <!--Open Graph Description-->
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="Web"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+        <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>Angular2 - Web</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+	
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Configurable Title</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://github.com/klugjo/hexo-theme-clean-blog">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('http://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Angular2</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        2017-03-01
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h2 id="模块"><a href="#模块" class="headerlink" title="模块"></a>模块</h2><p>创建模块：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">angular.module(<span class="string">'模块名称'</span>, [])</div></pre></td></tr></table></figure>
+<p>启动模块：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 指令方式启动</span></div><div class="line">ng-app=<span class="string">"模块名"</span></div><div class="line"></div><div class="line"><span class="comment">// 代码方式启动</span></div><div class="line">angular.bootstrap(<span class="built_in">document</span>, [<span class="string">'模块名'</span>])</div></pre></td></tr></table></figure>
+<p>获取模块：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">angular.module(<span class="string">'模块名'</span>)</div></pre></td></tr></table></figure>
+<p>启动多个模块（就是将多个模块组织到一起，然后作用到某个具体的DOM节点上）：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">angular.bootstrap(<span class="built_in">document</span>, [<span class="string">'模块名'</span>[,<span class="string">'模块名'</span>]])</div></pre></td></tr></table></figure>
+<p>多模块启动最佳实践：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">angular.module(<span class="string">'app1'</span>, []).controller(<span class="string">'AController'</span>)</div><div class="line">angular.module(<span class="string">'app2'</span>, []).controller(<span class="string">'BController'</span>)</div><div class="line">angular.module(<span class="string">'app3'</span>, []).controller(<span class="string">'CController'</span>)</div><div class="line"></div><div class="line">angular.module(<span class="string">'mainApp'</span>, [<span class="string">'app1'</span>, <span class="string">'app2'</span>, <span class="string">'app3'</span>])</div><div class="line"><span class="comment">// 最后在 HTML 中通过 ng-app 加载 mainApp 就可以使用 app1、app2、app3 中的所有控制器成员了</span></div><div class="line"><span class="comment">// 代码如下</span></div></pre></td></tr></table></figure>
+<p>html:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">body</span> <span class="attr">ng-app</span>=<span class="string">"mainApp"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">ng-controller</span>=<span class="string">"AController"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">ng-controller</span>=<span class="string">"BController"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">ng-controller</span>=<span class="string">"CController"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>如何划分模块：</p>
+<ul>
+<li>控制器按照页面具体的业务功能来划分</li>
+<li>模块就是将处理相关联业务的控制器组织到一起</li>
+<li>这样无论是从代码结构组织上还是可维护性上都是一种比较好的实践方式</li>
+</ul>
+<h2 id="控制器"><a href="#控制器" class="headerlink" title="控制器"></a>控制器</h2><p>第一种方式(在新版本中已被废弃)：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">DemoController</span> (<span class="params">$scope</span>) </span>&#123;</div><div class="line">  <span class="comment">// some code here</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>第二种方式(代码混淆压缩之后有问题)：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">angular.module(<span class="string">'app'</span>, [])</div><div class="line">  .controller(<span class="string">'DemoController'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">// some code here</span></div><div class="line">  &#125;)</div></pre></td></tr></table></figure>
+<p>第三方方式（推荐的方式）：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">angular.module(<span class="string">'app'</span>, [])</div><div class="line">  .controller(<span class="string">'DemoController'</span>, [<span class="string">'$scope'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">// some code here</span></div><div class="line">  &#125;])</div></pre></td></tr></table></figure>
+<h3 id="scope"><a href="#scope" class="headerlink" title="$scope"></a>$scope</h3><h3 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h3><hr>
+<h2 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h2><ul>
+<li>TodoMVC</li>
+<li>ng 调试</li>
+<li>过滤器</li>
+<li>常见指令</li>
+<li>组件</li>
+<li>ng xhr</li>
+<li>ngRoute</li>
+<li>案例：Angular Phonecat</li>
+</ul>
+<h2 id="ng-调试"><a href="#ng-调试" class="headerlink" title="ng 调试"></a>ng 调试</h2><h3 id="window-scope"><a href="#window-scope" class="headerlink" title="window.$scope"></a>window.$scope</h3><h3 id="AngularJS-Batarang"><a href="#AngularJS-Batarang" class="headerlink" title="AngularJS Batarang"></a>AngularJS Batarang</h3><p>第一：安装一个 Chrome 插件：<a href="https://chrome.google.com/webstore/detail/angularjs-batarang/ighdmehidhipcmcojjgiloacoafjmpfk?utm_source=chrome-ntp-icon" target="_blank" rel="external">AngularJS Batarang</a></p>
+<p>第二：以 http 服务的形式打开你查看调试的页面</p>
+<p>第三：打开控制台，找到 AngularJS 选项卡，切换进去</p>
+<p>第四：选择 Enable 启动</p>
+<p>第五：进入 Scopes 选项卡查看数据模型成员数据的动态变化</p>
+<p>注意：如果在使用的过程打开调试看不到 Scopes 记得通过在左上角的刷新按钮右键点击 <code>清空缓存并硬性重新加载</code> 即可。</p>
+<h2 id="Angular-过滤器"><a href="#Angular-过滤器" class="headerlink" title="Angular 过滤器"></a>Angular 过滤器</h2><h3 id="内置过滤器"><a href="#内置过滤器" class="headerlink" title="内置过滤器"></a>内置过滤器</h3><table>
+<thead>
+<tr>
+<th>过滤器名称</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>currency</td>
+<td>货币</td>
+</tr>
+<tr>
+<td>date</td>
+<td>日期</td>
+</tr>
+<tr>
+<td>filter</td>
+<td>过滤器中的过滤器</td>
+</tr>
+<tr>
+<td>json</td>
+<td>json对象格式化</td>
+</tr>
+<tr>
+<td>limitTo</td>
+<td>限制</td>
+</tr>
+<tr>
+<td>lowercase</td>
+<td>转小写</td>
+</tr>
+<tr>
+<td>number</td>
+<td>数字</td>
+</tr>
+<tr>
+<td>orderBy</td>
+<td>排序</td>
+</tr>
+<tr>
+<td>uppercase</td>
+<td>转大写</td>
+</tr>
+</tbody>
+</table>
+<h3 id="自定义过滤器"><a href="#自定义过滤器" class="headerlink" title="自定义过滤器"></a>自定义过滤器</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">angular.module(<span class="string">'模块'</span>)</div><div class="line">  .filter(<span class="string">'过滤器名称'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params">input, a, b</span>) </span>&#123;</div><div class="line">      <span class="comment">// input 就是使用过滤器的表达式计算结果</span></div><div class="line">      <span class="comment">// 如果想要支持参数，则在方法中依次接收即可</span></div><div class="line">      <span class="comment">// 在 HTML 中使用的时候，通过 :参数 来给过滤器传递参数</span></div><div class="line">    &#125;</div><div class="line">  &#125;)</div></pre></td></tr></table></figure>
+<h2 id="JSON-序列化"><a href="#JSON-序列化" class="headerlink" title="JSON 序列化"></a>JSON 序列化</h2><h3 id="JSON-stringify"><a href="#JSON-stringify" class="headerlink" title="JSON.stringify"></a>JSON.stringify</h3><p>作用：将一个 JavaScript 对象转为标准的 json 格式字符串</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> user = &#123;</div><div class="line">  <span class="attr">name</span>: <span class="string">'Jack'</span>,</div><div class="line">  <span class="attr">age</span>: <span class="number">18</span>,</div><div class="line">  <span class="attr">gender</span>: <span class="string">'男'</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="built_in">JSON</span>.stringify(user) <span class="comment">// =&gt; &#123;"name":"Jack","age":18,"gender":"男"&#125;</span></div></pre></td></tr></table></figure>
+<h3 id="JSON-parse"><a href="#JSON-parse" class="headerlink" title="JSON.parse"></a>JSON.parse</h3><p>作用：将一个标准的 json 格式字符串转为一个 JavaScript 对象</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> userStr = <span class="string">"&#123;"</span>name<span class="string">":"</span>Jack<span class="string">","</span>age<span class="string">":18,"</span>gender<span class="string">":"</span>男<span class="string">"&#125;"</span></div><div class="line"><span class="built_in">JSON</span>.parse(userStr)</div><div class="line"><span class="comment">// =&gt;</span></div><div class="line">&#123;</div><div class="line">  <span class="attr">name</span>: <span class="string">'Jack'</span>,</div><div class="line">  <span class="attr">age</span>: <span class="number">18</span>,</div><div class="line">  <span class="attr">gender</span>: <span class="string">'男'</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>将对象转为 json 格式字符串叫做序列化，<br>将 json 格式字符串转为对象叫做反序列化。</p>
+<h2 id="Web-Storage"><a href="#Web-Storage" class="headerlink" title="Web Storage"></a>Web Storage</h2><h3 id="window-localStorage"><a href="#window-localStorage" class="headerlink" title="window.localStorage"></a>window.localStorage</h3><p>作用：永久存储在自己的本地客户端，只要用户不清除</p>
+<ul>
+<li>setItem(key, value)<ul>
+<li>key 字符串</li>
+<li>value 字符串</li>
+</ul>
+</li>
+<li>getItem(key)</li>
+<li>removeItem(key)</li>
+</ul>
+<h3 id="window-sessionStorage"><a href="#window-sessionStorage" class="headerlink" title="window.sessionStorage"></a>window.sessionStorage</h3><p>作用：会话存储，浏览器关闭，数据自动清除</p>
+<h2 id="AngularJS-Phonecat-案例预览"><a href="#AngularJS-Phonecat-案例预览" class="headerlink" title="AngularJS Phonecat 案例预览"></a>AngularJS Phonecat 案例预览</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 下载源码</span></div><div class="line">git <span class="built_in">clone</span> https://github.com/angular/angular-phonecat.git</div><div class="line"></div><div class="line"><span class="comment"># 进入 angular-phonecat 目录</span></div><div class="line"><span class="built_in">cd</span> angular-phonecat</div><div class="line"></div><div class="line"><span class="comment"># 安装依赖</span></div><div class="line">npm install</div><div class="line"></div><div class="line"><span class="comment"># 启动</span></div><div class="line">npm start</div><div class="line"></div><div class="line"><span class="comment"># 在浏览器预览</span></div><div class="line">http://localhost:8000</div></pre></td></tr></table></figure>
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/klugjo/hexo-theme-clean-blog" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2017 Hack Yang<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
